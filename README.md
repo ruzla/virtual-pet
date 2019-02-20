@@ -1,1 +1,2 @@
-# Virtual Pet# virtual-pet
+# Virtual Pet
+## Virtual pet exercise
