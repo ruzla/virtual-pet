@@ -1,6 +1,6 @@
 const Pet = require('../src/pet');
 
-describe('constructor', () => {
+ describe('constructor', () => {
     it('returns an object', () => {
         expect(new Pet('Fido')).toBeInstanceOf(Object);
     });
@@ -115,6 +115,15 @@ describe('constructor', () => {
         expect(pet.checkUp()).toBe('I feel great!'); 
     });
   });
+
+//   describe('isAlive', () => {
+
+//      it('if the pets fitness is 0 or less', () => {
+//         const pet = new Pet('fido');
+//         pet.fitness = 0;
+//         expect(pet.isAlive()).toBe(false);
+//      });
+//   })
   
 
 
