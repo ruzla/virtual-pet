@@ -24,6 +24,12 @@ const Pet = require('../src/pet');
         pet.growUp();
         expect(pet.age).toEqual(1);
     });
+
+    it('throws an error if the pet is not alive', () => {
+        const pet = new Pet('Fido');
+        pet.age = 30;
+        expect(pet.growUp).toThrow('Your pet is no longer alive :(');
+    });
   });
 
   describe('hunger', () => {
@@ -32,14 +38,12 @@ const Pet = require('../src/pet');
     it('has initial hunger of 0', () => {
         expect(pet.hunger).toEqual(0);
       });
-
+  
     it('increments the hunger by 5', () => {
         pet.growUp();
         expect(pet.hunger).toEqual(5);
         pet.growUp();
         expect(pet.hunger).toEqual(10);
-        pet.growUp();
-        expect(pet.hunger).toEqual(15);
     });
   });
 
@@ -73,6 +77,12 @@ const Pet = require('../src/pet');
         pet.walk();
         expect(pet.fitness).toEqual(10);
     });
+
+    it('throws an error if the pet is not alive', () => {
+        const pet = new Pet('Fido');
+        pet.fitness = 0;
+        expect(pet.walk).toThrow('Your pet is no longer alive :(');
+    });
    });
 
    describe('feed', () => {
@@ -84,6 +94,12 @@ const Pet = require('../src/pet');
         expect(pet.hunger).toEqual(2);
         pet.feed();
         expect(pet.hunger).toEqual(0);
+    });
+
+    it('throws an error if the pet is not alive', () => {
+        const pet = new Pet('Fido');
+        pet.age = 30;
+        expect(pet.feed).toThrow('Your pet is no longer alive :(');
     });
    });
 
@@ -114,17 +130,15 @@ const Pet = require('../src/pet');
         pet.fitness = 4;
         expect(pet.checkUp()).toBe('I feel great!'); 
     });
+
+    it('throws an error if the pet is not alive', () => {
+        const pet = new Pet('Fido');
+        pet.age = 30;
+        expect(pet.checkUp).toThrow('Your pet is no longer alive :(');
+    });
   });
 
-//   describe('isAlive', () => {
 
-//      it('if the pets fitness is 0 or less', () => {
-//         const pet = new Pet('fido');
-//         pet.fitness = 0;
-//         expect(pet.isAlive()).toBe(false);
-//      });
-//   })
-  
 
 
   
