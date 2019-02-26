@@ -144,9 +144,9 @@ const Pet = require('../src/pet');
 //     const parent = new Pet('Dave');
 //     const child = new Pet('Amelia');
 //     parent.adoptChild(child);
-//     expect(parent.children).toEqual([ { name: 'Amelia', age: 0, hunger: 0, fitness: 10, children: [] } ]);
+//     expect(parent.children).toEqual([ { name: 'Amelia', age: 0, hunger: 0, fitness: 10 } ]);
 //   });
-// }); 
+// });
 
 
 

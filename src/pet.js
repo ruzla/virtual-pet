@@ -24,6 +24,7 @@ Pet.prototype = {
 
 Pet.prototype.adoptChild = function() {
     this.children.push(child);
+    delete child.children;
 };
 
 Pet.prototype.growUp = function() {
