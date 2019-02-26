@@ -1,14 +1,14 @@
-#Virtual Pet
+# Virtual Pet
 
 This is javascript code for a virtual pet.
 
-## Built Using
+### Built Using
 
 
 
 
 
-###Author
+### Author
 
 Russell Parry
 
