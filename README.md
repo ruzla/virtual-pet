@@ -5,7 +5,7 @@ Javascript Object-Oriented code for a virtual pet.
 ### Running the app
 To run clone to local machine.
 
-Navigate to directory and install npm package:
+Navigate to directory and install npm:
 ```
 npm install
 ```

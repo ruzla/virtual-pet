@@ -138,6 +138,16 @@ const Pet = require('../src/pet');
     });
   });
 
+  describe('parent and child', () => {
+    
+        it('if parent has child', () => {
+        let parent = new Pet('Dave');
+        let child = new Pet('Amelia');
+        parent.adoptChild(child);
+        expect(parent.children[0]).toEqual({ name: 'Amelia', age: 0, hunger: 0, fitness: 10 });
+      });
+    });
+    
     
 
 

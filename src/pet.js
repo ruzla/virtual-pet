@@ -22,7 +22,7 @@ Pet.prototype = {
     }
 };
 
-Pet.prototype.adoptChild = function() {
+Pet.prototype.adoptChild = function(child) {
     this.children.push(child);
     delete child.children;
 };
