@@ -1,9 +1,10 @@
-# Virtual Pet App
+# Virtual Pet
 
-Javascript Object-Oriented code for a virtual pet app.
+Javascript Object-Oriented code for a virtual pet.
 
 ### Running the app
-To run this app clone it to local machine. Navigate to directory and install npm package:
+To run clone to local machine.
+Navigate to directory and install npm package:
 ```
 npm install
 ```
