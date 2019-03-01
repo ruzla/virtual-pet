@@ -1,3 +1,5 @@
+// Good job! Great use of the convention of capitalised global constants, nicely structured code, easy to read
+
 const FITNESS_MAXIMUM = 10;
 const FITNESS_INCREASE = 4;
 const FITNESS_DECREASE = 3;
