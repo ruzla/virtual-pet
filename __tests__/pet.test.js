@@ -1,3 +1,8 @@
+// Great test suite, one case that seems missing is what would happen on the method checkUp if none of the conditions are met.
+// For more detail have a look at your test coverage - you can set it up by adding --collect-coverage to the test script in the package.json and then
+// running npm run test
+// Another test scenario - what happens if the pet adopts two children?
+
 const Pet = require('../src/pet');
 
  describe('constructor', () => {
