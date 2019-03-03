@@ -1,5 +1,3 @@
-// Good job! Great use of the convention of capitalised global constants, nicely structured code, easy to read
-
 const FITNESS_MAXIMUM = 10;
 const FITNESS_INCREASE = 4;
 const FITNESS_DECREASE = 3;
@@ -20,6 +18,7 @@ function Pet(name) {
 
 Pet.prototype = {
     get isAlive() {
+        // you can use the constants here as well?
         return this.age < 30 && this.hunger < 10 && this.fitness > 0;
     }
 };
@@ -30,6 +29,7 @@ Pet.prototype.adoptChild = function(child) {
 };
 
 Pet.prototype.growUp = function() {
+    // this guard "functionality" is repeated within all methods, why not pull it out to a separate method itself?
     if (!this.isAlive) {
         throw new Error('Your pet is no longer alive :(');
     };
@@ -69,16 +69,17 @@ Pet.prototype.checkUp = function() {
         throw new Error('Your pet is no longer alive :(');
     };
     
-    if(this.hunger >= 5 && this.fitness <= 3) 
+    // I prefer to always wrap if statements with curly brackets. 
+    // Makes the branches easier to spot 
+    // and if someone needs to add another statement in they can just add it in...
+    if (this.hunger >= 5 && this.fitness <= 3) {
         return 'I am hungry AND I need a walk';
-    
-    else if(this.hunger <= 4 && this.fitness >= 4)
+    } else if(this.hunger <= 4 && this.fitness >= 4) {
         return 'I feel great!'
-
-    else if(this.fitness <= 3)
+    } else if(this.fitness <= 3) {
         return 'I need a walk'
-
-    else if(this.hunger >= 5)
-        return 'I am hungry'    
+    } else if(this.hunger >= 5) {
+        return 'I am hungry'   
+    } 
 };
 module.exports = Pet;

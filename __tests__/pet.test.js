@@ -91,9 +91,16 @@ const Pet = require('../src/pet');
    });
 
    describe('feed', () => {
-
+    // you could leverage beforeEach hook with scoping 
+    // to simply setting up a test pet instance
+    // same pattern can be applied to other describe blocks you've
+    let pet; 
+    
+    beforeEach(() => {
+     pet = New Pet('fido') ;
+    });
+    
     it('decrease hunger level by 3', () => {
-        const pet = new Pet('fido');
         pet.hunger = 5;
         pet.feed();
         expect(pet.hunger).toEqual(2);
@@ -102,7 +109,6 @@ const Pet = require('../src/pet');
     });
 
     it('throws an error if the pet is not alive', () => {
-        const pet = new Pet('Fido');
         pet.age = 30;
         expect(() => pet.feed()).toThrow('Your pet is no longer alive :(');
     });
