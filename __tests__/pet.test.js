@@ -1,8 +1,4 @@
 // Great test suite, one case that seems missing is what would happen on the method checkUp if none of the conditions are met.
-// For more detail have a look at your test coverage - you can set it up by adding --collect-coverage to the test script in the package.json and then
-// running npm run test
-// Another test scenario - what happens if the pet adopts two children?
-
 const Pet = require('../src/pet');
 
  describe('constructor', () => {
@@ -145,13 +141,23 @@ const Pet = require('../src/pet');
 
   describe('parent and child', () => {
     
-        it('if parent has child', () => {
+    it('if parent has child', () => {
         let parent = new Pet('Dave');
         let child = new Pet('Amelia');
         parent.adoptChild(child);
-        expect(parent.children[0]).toEqual({ name: 'Amelia', age: 0, hunger: 0, fitness: 10 });
-      });
+        expect(parent.children[0]).toEqual({ name: 'Amelia', age: 0, hunger: 0, children: [], fitness: 10 });
     });
+
+    it('if parent has two children', () => {
+        let parent = new Pet('Dave');
+        let child = new Pet('Amelia');
+        let secondChild = new Pet('Bob');
+        parent.adoptChild(child);
+        parent.adoptChild(secondChild);
+        expect(parent.children[0]).toEqual({ name: 'Amelia', age: 0, hunger: 0, children: [], fitness: 10 }, {name: 'Bob', age: 0, hunger: 0, children: [], fitness: 10});
+    });
+
+ });
     
     
 

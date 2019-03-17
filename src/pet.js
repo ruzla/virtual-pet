@@ -1,5 +1,3 @@
-// Good job! Great use of the convention of capitalised global constants, nicely structured code, easy to read
-
 const FITNESS_MAXIMUM = 10;
 const FITNESS_INCREASE = 4;
 const FITNESS_DECREASE = 3;
@@ -26,7 +24,6 @@ Pet.prototype = {
 
 Pet.prototype.adoptChild = function(child) {
     this.children.push(child);
-    delete child.children;
 };
 
 Pet.prototype.growUp = function() {
@@ -81,4 +78,5 @@ Pet.prototype.checkUp = function() {
     else if(this.hunger >= 5)
         return 'I am hungry'    
 };
+
 module.exports = Pet;
