@@ -1,4 +1,3 @@
-// Great test suite, one case that seems missing is what would happen on the method checkUp if none of the conditions are met.
 const Pet = require('../src/pet');
 
  describe('constructor', () => {
