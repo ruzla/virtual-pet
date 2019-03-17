@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1552837499536" clover="3.2.0">
-  <project timestamp="1552837499536" name="All files">
+<coverage generated="1552841667605" clover="3.2.0">
+  <project timestamp="1552841667605" name="All files">
     <metrics statements="46" coveredstatements="46" conditionals="27" coveredconditionals="26" methods="7" coveredmethods="7" elements="80" coveredelements="79" complexity="0" loc="46" ncloc="46" packages="1" files="1" classes="1"/>
     <file name="pet.js" path="/Users/russ/Projects/virtual-pet/src/pet.js">
       <metrics statements="46" coveredstatements="46" conditionals="27" coveredconditionals="26" methods="7" coveredmethods="7"/>
